@@ -1,0 +1,344 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #A9A29A;
+    background-color: #000;
+}
+
+/* Header */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #A9A29A;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #A9A29A;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #e7a2b8;
+}
+
+/* Home / Hero */
+.home {
+    height: 100vh;
+    background: url('img/HomeCover.png') no-repeat;
+    background-size: cover;
+    background-position: right;
+    align-items: center;
+}
+
+.home > .container {
+    visibility: hidden;
+}
+
+.home-alt {
+    display: block;
+    margin-top: -10rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+@media (min-width: 48rem) {
+    .home > .container {
+        visibility: visible;
+    }
+
+    .home-alt {
+        display: none;
+    }
+}
+
+.home-content.og {
+    padding: 20vh 0;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.home-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e7a2b8;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin: 1.25rem 0 2.5rem;
+    line-height: 1.4;
+    max-width: 26rem;
+}
+
+/* Buttons */
+.home-content .btn-box,
+.home-alt .btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 20rem;
+    height: 3rem;
+    margin: 0 auto;
+}
+
+.home-content .btn-box {
+    justify-content: space-between;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 100%;
+    background: transparent;
+    color: #e7a2b8;
+    border: 0.125rem solid #e7a2b8;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn-box a:hover {
+    color: #010101;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e7a2b8;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+/* Pink main button */
+.btn-box .alt-btn {
+    background: #e7a2b8;
+    color: #010101;
+}
+
+.btn-box .alt-btn:hover {
+    color: #e7a2b8;
+}
+
+.btn-box .alt-btn::before {
+    background: #010101;
+}
+
+/* Social icons */
+.home-social {
+    bottom: 2.5rem;
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.25rem 10%;
+}
+
+.home-social a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 0.15rem solid #e7a2b8;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: #e7a2b8;
+    text-decoration: none;
+}
+
+/* About section */
+.about {
+    padding-top: 2rem;
+}
+
+.about h2 {
+    color: #fff;
+}
+
+.about p {
+    color: #A9A29A;
+}
+
+/* Assignment preview blocks */
+.portfolio {
+    padding-bottom: 3rem;
+}
+
+.portfolio h2 {
+    color: #fff;
+}
+
+.column-block {
+    height: 20rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+}
+
+.column-block h3,
+.column-block p {
+    color: #ffffff;
+}
+
+/* Description inside the block */
+.desc {
+    opacity: 1;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.desc a {
+    color: #e7a2b8;
+    text-decoration: none;
+}
+
+.desc a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Background blocks (replace with your assignment images later) */
+#block1 {
+    background-size: cover;
+    background-position: center;
+}
+
+#block2 {
+    background-size: cover;
+    background-position: center;
+}
+
+#block3 {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Assignment list */
+.assignment-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.assignment-list li {
+    margin-bottom: 0.3rem;
+}
+
+.assignment-list a {
+    color: #e7a2b8;
+    text-decoration: none;
+}
+
+.assignment-list a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.assignment-grid {
+    margin-top: 2rem;
+}
+
+.assignment-card {
+    margin-bottom: 2rem;
+}
+
+.thumb-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    background-color: #111;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.thumb-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.assignment-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.assignment-desc {
+    color: #A9A29A;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.assignment-link {
+    color: #e7a2b8;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.assignment-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.assignment7-row {
+    margin-top: 2rem;
+}
+
+.assignment7-center {
+    text-align: center;
+}
+
+.assignment7-center h3 {
+    margin-top: 0.75rem;
+}
